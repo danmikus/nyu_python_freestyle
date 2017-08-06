@@ -2,7 +2,7 @@
 
 #### Project Objectives
 
-The objective of this project is to be able to pull data from any given day (in recent history or near future) on events in NYC and display a heat map of the events.
+The objective of this project is to be able to pull data for any given day (in recent history or near future) on events in NYC and display a heat map of them.
 
 #### How did I arrive at this project?
 
@@ -37,6 +37,6 @@ I will then format the endpoint url with the given date and parameters necessary
 
 Then I would use the Google Geocode API to transform the addresses to latitude and longitude. This will require a Google Cloud Platform account and a Google API key. Once the data is returned, I will create tuple pairs for each latitude and longitude to be used in the heat map.
 
-##### *Create Heat map*
+##### *Create heat map*
 
 This consists of creating the map and the heat map layer and displaying it in the notebook.

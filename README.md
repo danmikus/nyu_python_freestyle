@@ -7,7 +7,7 @@ This repo uses Jupyter Notebook with IPython Kernel to do analyses on where even
 3. Send addresses to Google Geocode API to get latitude and longitude
 4. Create Heat map
 
-As a note, its written in Python3, so make sure it is configured correctly in the notebook.
+As a note, it's written in Python3, so make sure it is configured correctly in the notebook.
 
 #### Using the notebook
 
