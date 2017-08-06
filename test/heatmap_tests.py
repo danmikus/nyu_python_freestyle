@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.append(os.path.join('..', 'heatlib'))
+sys.path.append(os.path.join('..', 'app', 'heatlib'))
 from heat import *
 
 def test_check_date_format_1():
