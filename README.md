@@ -37,3 +37,5 @@ To open the notebook, navigate to the root folder and run the following:
     jupyter notebook --browser=chrome
 
 Note that I specified chrome as the browser. An open issue with Jupyter requires Mac users to specify the browser.
+
+Once the directory is open, click into *nyc_event_heatmap.ipynb* to begin the analysis.
