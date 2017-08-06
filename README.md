@@ -1,26 +1,39 @@
-# nyu_python_freestyle
+# New York Event Permit Heatmap Analysis
+
+This repo uses Jupyter Notebook with IPython Kernel to do analyses on where events are happening in New York City on any given day. The notebook uses NYC event permit data to do this analysis. The data is pulled in from the [NYC OpenData Site](https://data.cityofnewyork.us/City-Government/NYC-Permitted-Event-Information/tvpp-9vvx/data) via API and uses the gmaps module to create a heatmap of the events around the city. The general flow is:
+
+1. Input and format date
+2. Retrieve event permit data
+3. Send addresses to Google Geocode API to get latitude and longitude
+4. Create Heatmap
+
+#### Installing Jupyter Notebook
+To install Jupyter run the following command:
+
+    pip3 install -U jupyter
+
+You'll also need to make sure that you have enabled widgets extensions for Jupyter:
+
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
+#### Installing gmaps with pip
+
+You can then install gmaps with:
+
+    pip install gmaps
+
+Then tell Jupyter to load the extension with:
+
+jupyter nbextension enable --py --sys-prefix gmaps
+
+#### Google API keys
+
+To access Google maps, gmaps needs a Google API key. To create an API key, follow the [instructions in the documentation](https://developers.google.com/maps/documentation/geocoding/start#auth). Once you have an API key, pass it to gmaps.
+
+#### Running the Notebook
+
+To open the notebook, navigate to the root folder and run the following:
+
     jupyter notebook --browser=chrome
 
-    Installing gmaps with pip
-
-    If you do not use conda, you can install gmaps with pip. The current version of gmaps is only tested with IPython 4.2 or later and ipywidgets 6.0.0 or later. To upgrade to the latest versions, use:
-
-    $ pip install -U jupyter
-    Make sure that you have enabled widgets extensions to Jupyter:
-
-    $ jupyter nbextension enable --py --sys-prefix widgetsnbextension
-    You can then install gmaps with:
-
-    $ pip install gmaps
-    Then tell Jupyter to load the extension with:
-
-    $ jupyter nbextension enable --py --sys-prefix gmaps
-
-
-
-
-    Google API keys
-
-    To access Google maps, gmaps needs a Google API key. This key tells Google who you are, presumably so it can keep track of rate limits and such things. To create an API key, follow the instructions in the documentation. Once you have an API key, pass it to gmaps before creating widgets:
-
-    gmaps.configure(api_key="AI...")
+Note that I specified chrome as the browser. An open issue with Jupyter requires Mac users to specify the browser.

@@ -12,7 +12,7 @@ class coordinates(object):
     def address(self):
         return self.addr
 
-    def lattitude(self):
+    def latitude(self):
         return self.lat
 
     def longitude(self):
@@ -88,7 +88,7 @@ def get_coords(key, locations):
 def transform_coords(coords):
     pairs = []
     for pair in coords:
-        temp_coord = (pair.lattitude(), pair.longitude())
+        temp_coord = (pair.latitude(), pair.longitude())
         pairs.append(temp_coord)
     return pairs
 
